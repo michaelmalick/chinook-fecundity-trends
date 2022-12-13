@@ -1,0 +1,63 @@
+R version 4.1.2 (2021-11-01)
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+Running under: Windows 10 x64 (build 19044)
+
+Matrix products: default
+
+locale:
+[1] LC_COLLATE=English_United States.1252 
+[2] LC_CTYPE=English_United States.1252   
+[3] LC_MONETARY=English_United States.1252
+[4] LC_NUMERIC=C                          
+[5] LC_TIME=English_United States.1252    
+
+attached base packages:
+[1] grid      stats     graphics  grDevices utils     datasets  methods  
+[8] base     
+
+other attached packages:
+ [1] stringr_1.4.0            rnaturalearthhires_0.2.0 rnaturalearth_0.1.0     
+ [4] MARSS_3.11.4             ggsimple_1.1             readxl_1.3.1            
+ [7] bayesplot_1.8.1          codatools_0.4            R2jags_0.7-1            
+[10] rjags_4-12               coda_0.19-4              patchwork_1.1.1         
+[13] colorspace_2.0-2         raster_3.5-15            sp_1.4-6                
+[16] mgcv_1.8-38              nlme_3.1-153             sf_1.0-5                
+[19] bayesdfa_1.2.0           rstan_2.21.3             StanHeaders_2.21.0-7    
+[22] brms_2.16.3              loo_2.4.1                rstanarm_2.21.1         
+[25] Rcpp_1.0.8               ggplot2_3.3.5            data.table_1.14.2       
+
+loaded via a namespace (and not attached):
+  [1] minqa_1.2.4          ellipsis_0.3.2       class_7.3-19        
+  [4] ggridges_0.5.3       rsconnect_0.8.25     estimability_1.3    
+  [7] markdown_1.1         base64enc_0.1-3      proxy_0.4-26        
+ [10] farver_2.1.0         DT_0.20              fansi_1.0.2         
+ [13] mvtnorm_1.1-3        bridgesampling_1.1-2 codetools_0.2-18    
+ [16] splines_4.1.2        shinythemes_1.2.0    nloptr_2.0.0        
+ [19] shiny_1.7.1          compiler_4.1.2       emmeans_1.7.3       
+ [22] backports_1.4.1      assertthat_0.2.1     Matrix_1.3-4        
+ [25] fastmap_1.1.0        cli_3.1.1            later_1.3.0         
+ [28] htmltools_0.5.2      prettyunits_1.1.1    tools_4.1.2         
+ [31] igraph_1.2.11        gtable_0.3.0         glue_1.6.1          
+ [34] reshape2_1.4.4       dplyr_1.0.7          posterior_1.2.0     
+ [37] cellranger_1.1.0     vctrs_0.3.8          crosstalk_1.2.0     
+ [40] tensorA_0.36.2       KFAS_1.4.6           ps_1.6.0            
+ [43] lme4_1.1-28          mime_0.12            miniUI_0.1.1.1      
+ [46] lifecycle_1.0.1      gtools_3.9.2         terra_1.5-17        
+ [49] MASS_7.3-54          zoo_1.8-9            scales_1.1.1        
+ [52] colourpicker_1.1.1   promises_1.2.0.1     Brobdingnag_1.2-7   
+ [55] parallel_4.1.2       inline_0.3.19        shinystan_2.5.0     
+ [58] gridExtra_2.3        stringi_1.7.6        dygraphs_1.1.1.6    
+ [61] e1071_1.7-9          checkmate_2.0.0      boot_1.3-28         
+ [64] pkgbuild_1.3.1       rlang_1.0.1          pkgconfig_2.0.3     
+ [67] matrixStats_0.61.0   distributional_0.3.0 lattice_0.20-45     
+ [70] purrr_0.3.4          labeling_0.4.2       rstantools_2.1.1    
+ [73] htmlwidgets_1.5.4    processx_3.5.2       tidyselect_1.1.1    
+ [76] plyr_1.8.6           magrittr_2.0.2       R6_2.5.1            
+ [79] generics_0.1.2       DBI_1.1.2            pillar_1.7.0        
+ [82] withr_2.4.3          units_0.7-2          xts_0.12.1          
+ [85] survival_3.2-13      abind_1.4-5          tibble_3.1.6        
+ [88] crayon_1.4.2         KernSmooth_2.23-20   utf8_1.2.2          
+ [91] callr_3.7.0          threejs_0.3.3        digest_0.6.29       
+ [94] classInt_0.4-3       xtable_1.8-4         httpuv_1.6.5        
+ [97] RcppParallel_5.1.5   stats4_4.1.2         munsell_0.5.0       
+[100] viridisLite_0.4.0    R2WinBUGS_2.1-21     shinyjs_2.1.0       

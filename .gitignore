@@ -1,0 +1,9 @@
+/archive
+/data/maps
+/figures
+/misc
+outputs/
+*.pptx
+*.xls
+*xlsx
+scratch.R

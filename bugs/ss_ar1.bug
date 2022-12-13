@@ -1,0 +1,25 @@
+## State-space AR1 model
+model {
+   ## Priors on process and observation errors
+   sigma_pro ~ dgamma(1, 1)                ## process error SD
+   sigma_obs ~ dgamma(1, 1)                ## observation error SD
+   tau_pro <- 1 / (sigma_pro*sigma_pro)    ## process error precision
+   tau_obs <- 1 / (sigma_obs*sigma_obs)    ## observation error precision
+   phi ~ dnorm(0, 1)                       ## ar1
+
+   ## Prior on first data point
+   sigma_X0 <- 5
+   tau_X0 <- 1/(sigma_X0*sigma_X0)
+   X0 ~ dnorm(0, tau_X0)
+
+   X[1] <- X0
+   Y[1] ~ dnorm(X[1], tau_obs)
+   for(i in 2:N) {
+      X[i] ~ dnorm(X[i-1] * phi, tau_pro)
+      Y[i] ~ dnorm(X[i], tau_obs)
+   }
+
+   for(i in 1:N) {
+       yrep[i] ~ dnorm(X[i], tau_obs)
+   }
+}
