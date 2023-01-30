@@ -644,7 +644,7 @@ g1 <- ggplot(slope_sum) +
     labs(x = "Size effect (eggs / mm)", y = NULL) +
     # geom_text(aes(x = -0.25, y = 18.15, label = "A"),
     #           color = "grey40", size = 3, hjust = 0.4) +
-    geom_text(aes(x = -Inf, y = Inf, label = "A"),
+    geom_text(data = data.frame(), aes(x = -Inf, y = Inf, label = "A"),
               color = "grey40", size = 3, hjust = -1, vjust = 1.8) +
     theme_simple()
 print(g1)
@@ -662,7 +662,7 @@ g2 <- ggplot(slope) +
     labs(x = "Size effect (eggs / mm)", y = "Posterior samples") +
     # geom_text(aes(x = 5, y = 1380, label = "C"),
     #           color = "grey40", size = 3, hjust = 0.4) +
-    geom_text(aes(x = -Inf, y = Inf, label = "C"),
+    geom_text(data = data.frame(), aes(x = -Inf, y = Inf, label = "C"),
               color = "grey40", size = 3, hjust = -1, vjust = 1.8) +
     theme_simple()
 print(g2)
@@ -707,7 +707,7 @@ g4 <- ggplot(fecund_size) +
     geom_ribbon(data = pr, aes(x = x, ymin = y_lower, ymax = y_upper),
                 fill = "grey30", color = NA, alpha = 0.2) +
     labs(x = "Length (mm)", y = "Fecundity") +
-    geom_text(aes(x = -Inf, y = Inf, label = "B"),
+    geom_text(data = data.frame(), aes(x = -Inf, y = Inf, label = "B"),
               color = "grey40", size = 3, hjust = -1, vjust = 1.8) +
     theme_simple()
 print(g4)
