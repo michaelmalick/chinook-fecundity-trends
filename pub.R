@@ -633,6 +633,7 @@ slope_post <- as.data.table(reshape2::melt(slope_r))
 slope_sum <- slope_post[ , .(mean = mean(value),
                              upper = quantile(value, probs = 0.975),
                              lower = quantile(value, probs = 0.025)), .(variable)]
+
 g1 <- ggplot(slope_sum) +
     # geom_vline(xintercept = 0, color = "grey50", linetype = 2) +
     geom_vline(xintercept = mean(slope_b[ , 1]), color = "red3", linetype = 2) +
@@ -640,7 +641,11 @@ g1 <- ggplot(slope_sum) +
     scale_x_continuous(limits = c(-0.3, 14),
                        breaks = seq(0, 14, by = 2)) +
     geom_segment(aes(x = lower, xend = upper, y = variable, yend = variable)) +
-    labs(x = "Size effect (eggs / mm)", y = NULL, title = "A") +
+    labs(x = "Size effect (eggs / mm)", y = NULL) +
+    # geom_text(aes(x = -0.25, y = 18.15, label = "A"),
+    #           color = "grey40", size = 3, hjust = 0.4) +
+    geom_text(aes(x = -Inf, y = Inf, label = "A"),
+              color = "grey40", size = 3, hjust = -1, vjust = 1.8) +
     theme_simple()
 print(g1)
 
@@ -654,7 +659,11 @@ g2 <- ggplot(slope) +
                    fill = "red3", alpha = 0.5, na.rm = TRUE) +
     # scale_x_continuous(limits = c(-0.3, 14),
     #                    breaks = seq(0, 14, by = 2)) +
-    labs(x = "Size effect (eggs / mm)", y = "Posterior samples", title = "C") +
+    labs(x = "Size effect (eggs / mm)", y = "Posterior samples") +
+    # geom_text(aes(x = 5, y = 1380, label = "C"),
+    #           color = "grey40", size = 3, hjust = 0.4) +
+    geom_text(aes(x = -Inf, y = Inf, label = "C"),
+              color = "grey40", size = 3, hjust = -1, vjust = 1.8) +
     theme_simple()
 print(g2)
 
@@ -697,7 +706,9 @@ g4 <- ggplot(fecund_size) +
     geom_path(data = pr, aes(x = x, y = y), color = "red3", size = 1.2) +
     geom_ribbon(data = pr, aes(x = x, ymin = y_lower, ymax = y_upper),
                 fill = "grey30", color = NA, alpha = 0.2) +
-    labs(x = "Length (mm)", y = "Fecundity", title = "B") +
+    labs(x = "Length (mm)", y = "Fecundity") +
+    geom_text(aes(x = -Inf, y = Inf, label = "B"),
+              color = "grey40", size = 3, hjust = -1, vjust = 1.8) +
     theme_simple()
 print(g4)
 
