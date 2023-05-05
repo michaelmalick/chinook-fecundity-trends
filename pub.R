@@ -432,6 +432,7 @@ dfa1_loadings[ , run := factor(run, levels = levels(fecund_dfa$run))]
 dfa1_loadings[ , N := paste("n =", as.character(.N)), by = group]
 dfa1_loadings[ , sig := ifelse(upper < 0 | lower > 0, 1, 0)]
 dfa1_loadings[run == "Spring" & region == "Puget Sound", ]
+sum(dfa1_loadings$sig) / nrow(dfa1_loadings)
 
 g2 <- ggplot() +
     geom_vline(xintercept = 0, color = "grey50", linetype = 2) +

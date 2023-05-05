@@ -11,6 +11,16 @@ mean(x$N)
 x <- fecund_size[ , .(N = length(year)), by = id_label]
 mean(x$N)
 
+## Avg decline 2009--2017
+m <- fecund[ , .(fecund_2009 = fecundity[year == 2009],
+                        fecund_2017 = fecundity[year == 2017]),
+                   by = id_label]
+m$diff <- m$fecund_2009 - m$fecund_2017
+m$pc <- ((m$fecund_2017 - m$fecund_2009) / m$fecund_2009) * 100
+mean(m$diff, na.rm = TRUE)
+mean(m$pc, na.rm = TRUE)
+
+
 
 ## Fecundity violin ----------------------------------------
 gr <-fecund[ , .N, by = .(group, region)]
